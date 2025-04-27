@@ -165,7 +165,7 @@ vim.opt.confirm = true
 --  See `:help vim.keymap.set()`
 
 -- Exit file to go back to netrw
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[V]iew files' })
+vim.keymap.set('n', '<leader>pv', vim.cmd.Ex, { desc = '[P]roject [V]iew' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
