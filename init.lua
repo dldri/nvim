@@ -34,6 +34,11 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- PERF: [[Custom settings]]
+--
+-- Adds line numbers to netrw
+vim.cmd [[let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro']]
+-- ===== ===== ===== ===== =====
 -- Make line numbers default and use relative number
 vim.opt.number = true
 vim.opt.relativenumber = true
