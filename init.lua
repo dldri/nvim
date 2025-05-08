@@ -5,12 +5,12 @@
 -- which is very useful when you're not exactly sure of what you're looking for.
 --
 -- NOTE:
--- If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
---
+   If you experience any errors while trying to install kickstart, run `:checkhealth` for more info.
+
 --]]
 
 -- NOTE: [[ Must be loaded first. Contains set leader. ]]
-require 'codri.set'
+require 'dldri.set'
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
