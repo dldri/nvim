@@ -47,7 +47,7 @@ vim.opt.smartcase = true
 vim.opt.signcolumn = 'yes'
 
 -- Decrease update time
-vim.opt.updatetime = 250
+vim.opt.updatetime = 50
 
 -- Decrease mapped sequence wait time
 vim.opt.timeoutlen = 300
@@ -75,3 +75,13 @@ vim.opt.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.opt.confirm = true
+
+-- Remove line wrap
+vim.opt.wrap = false
+
+-- Turn off search highlighting and enables incremental search
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- Colours column 80 to prompt line break
+vim.opt.colorcolumn = "80"
