@@ -43,6 +43,6 @@ vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
 
 -- Allows pasting over something
-vim.keymap.set('x', '<leader>p', '"_deP')
+vim.keymap.set('x', '<leader>p', '"_dP')
 
 -- ===== ===== ===== ===== =====
