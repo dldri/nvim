@@ -84,4 +84,9 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 -- Colours column 80 to prompt line break
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = '80'
+
+-- Set tab width to 4 space but uses 8 as tabstop
+vim.opt.expandtab = true -- Use spaces instead of tabs
+vim.opt.shiftwidth = 4 -- Indentation (e.g., >>) uses 4 spaces
+vim.opt.softtabstop = 4 -- Tab key in insert mode inserts 4 spaces
