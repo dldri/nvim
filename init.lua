@@ -769,6 +769,7 @@ require('lazy').setup({
         'python',
         'typescript',
         'yaml',
+        'vue',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
