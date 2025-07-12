@@ -46,4 +46,7 @@ vim.keymap.set('n', 'N', 'Nzzzv')
 -- Allows pasting over something
 vim.keymap.set('x', '<leader>p', '"_dP')
 
+-- Remap digraph from <C-k> (used by blink.cmp)
+vim.keymap.set('i', '<C-k><C-k>', '<C-k>', { noremap = true, silent = true })
+
 -- ===== ===== ===== ===== =====
