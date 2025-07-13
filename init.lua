@@ -29,38 +29,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- NOTE: Setup lazy.nvim
 require('lazy').setup({
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000, -- Ensure it loads early for themes
-    config = function()
-      require('catppuccin').setup {
-        flavour = 'mocha', -- Set Mocha as the default flavour
-        transparent_background = false, -- Customize as needed
-        term_colors = true,
-        styles = {
-          comments = {},
-        },
-        color_overrides = {
-          mocha = {
-            base = '#000000',
-          },
-        },
-        integrations = {
-          cmp = true, -- For nvim-cmp (included in nvim-kickstart)
-          gitsigns = true,
-          nvimtree = true,
-          telescope = true,
-          notify = true,
-          mini = true,
-          -- Add other integrations as needed
-        },
-      }
-      -- Apply the colorscheme
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
-  },
-
+  { import = 'themes.catppuccin-mocha' },
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
