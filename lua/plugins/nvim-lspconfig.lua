@@ -81,22 +81,6 @@ return {
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
           end, '[T]oggle Inlay [H]ints')
         end
-
-        -- Autoformat on save for Biome-supported ft (js, jsx, ts, tsx, d.ts, json and jsonc.)
-        if client and client.name == 'biome' then
-          vim.api.nvim_create_autocmd('BufWritePre', {
-            buffer = event.buf,
-            callback = function()
-              vim.lsp.buf.format {
-                bufnr = event.buf,
-                filter = function(c)
-                  return c.name == 'biome'
-                end,
-              }
-            end,
-            group = vim.api.nvim_create_augroup('biome-format', { clear = true }),
-          })
-        end
       end,
     })
 
@@ -141,17 +125,11 @@ return {
           },
         },
       },
-      biome = {
-        capabilities = {
-          documentFormattingProvider = true, -- Enables LSP formatting
-        },
-      },
     }
 
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
-      'biome', -- Ensure Biome is installed via Mason
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
