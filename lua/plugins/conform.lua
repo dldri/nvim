@@ -31,11 +31,6 @@ return {
       css = { 'prettierd' },
       html = { 'prettierd' },
       markdown = { 'prettierd' },
-      javascript = { 'prettierd', 'biome', 'biome-organize-imports' },
-      javascriptreact = { 'prettierd', 'biome', 'biome-organize-imports' },
-      typescript = { 'prettierd', 'biome', 'biome-organize-imports' },
-      typescriptreact = { 'prettierd', 'biome', 'biome-organize-imports' },
-      json = { 'biome' },
     },
   },
 }
