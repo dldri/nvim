@@ -49,4 +49,6 @@ vim.keymap.set('x', '<leader>p', '"_dP')
 -- Remap digraph from <C-k> (used by blink.cmp)
 vim.keymap.set('i', '<C-k><C-k>', '<C-k>', { noremap = true, silent = true })
 
+-- Copy buffer path to clipboard
+vim.keymap.set('n', '<leader>yp', ':let @+ = getcwd()<CR>', { noremap = true, silent = true, desc = '[Y]ank [P]ath' })
 -- ===== ===== ===== ===== =====
