@@ -16,6 +16,6 @@ vim.api.nvim_create_autocmd('BufWritePost', {
   pattern = { '*.js', '*.jsx', '*.ts', '*.tsx', '*.json' },
   desc = 'Run Ultracite formatting on save',
   callback = function()
-    vim.cmd 'silent !npx ultracite format %'
+    vim.cmd 'silent !pnpm dlx ultracite format %'
   end,
 })
