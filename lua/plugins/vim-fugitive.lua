@@ -1,5 +1,6 @@
 return {
   'tpope/vim-fugitive',
+  event = 'VimEnter',
   keys = {
     { '<leader>gs', '<cmd>G<CR>', desc = '[g]it [s]tatus' },
     { '<leader>gw', '<cmd>Gwrite<CR>', desc = 'Stage file' },
@@ -9,6 +10,7 @@ return {
     { '<leader>gl', '<cmd>G lg<CR>', desc = '[g]it [l]og' },
     { '<leader>gp', '<cmd>G push<CR>', desc = '[g]it [p]ush' },
     { '<leader>gP', '<cmd>G pull<CR>', desc = '[g]it [P]ull' },
+    { '<leader>gf', '<cmd>G fetch<CR>', desc = '[g]it [f]etch' },
   },
   config = function()
     vim.api.nvim_create_autocmd('FileType', {
