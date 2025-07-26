@@ -10,12 +10,3 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     vim.highlight.on_yank()
   end,
 })
-
--- Run Ultracite formatting on save for specific filetypes
-vim.api.nvim_create_autocmd('BufWritePost', {
-  pattern = { '*.js', '*.jsx', '*.ts', '*.tsx', '*.json' },
-  desc = 'Run Ultracite formatting on save',
-  callback = function()
-    vim.cmd 'silent !pnpm dlx ultracite format %'
-  end,
-})

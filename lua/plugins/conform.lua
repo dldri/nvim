@@ -31,6 +31,12 @@ return {
       css = { 'prettierd' },
       html = { 'prettierd' },
       markdown = { 'prettierd' },
+      javascript = { 'biome-check' },
+      javascriptreact = { 'biome-check' },
+      typescript = { 'biome-check' },
+      typescriptreact = { 'biome-check' },
+      json = { 'biome-check' },
+      jsonc = { 'biome-check' },
     },
   },
 }
