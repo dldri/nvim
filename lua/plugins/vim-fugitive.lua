@@ -71,11 +71,20 @@ return {
           end)
         end, opts)
 
-        opts.desc = 'Delete branch under cursor'
+        opts.desc = 'Checkout branch under cursor'
         vim.keymap.set('n', '<CR>', function()
           local branch = vim.fn.expand '<cfile>'
           vim.cmd.Git('checkout ' .. branch)
           vim.cmd 'bdelete'
+        end, opts)
+
+        opts.desc = 'Create a new branch'
+        vim.keymap.set('n', 'cb<Space>', function()
+          vim.ui.input({ prompt = 'Enter new branch name: ' }, function(input)
+            vim.cmd.Git('branch ' .. input)
+            vim.cmd 'bdelete'
+            vim.cmd.Git 'branch'
+          end)
         end, opts)
       end,
     })
