@@ -51,4 +51,7 @@ vim.keymap.set('i', '<C-k><C-k>', '<C-k>', { noremap = true, silent = true })
 
 -- Copy buffer path to clipboard
 vim.keymap.set('n', '<leader>yp', ':let @+ = getcwd()<CR>', { noremap = true, silent = true, desc = '[Y]ank [P]ath' })
+
+-- Adjust increment to avoid conflict with Wezterm
+vim.keymap.set('n', '<C-i>', '<C-a>', { noremap = true, silent = true, desc = 'Increment number' })
 -- ===== ===== ===== ===== =====
