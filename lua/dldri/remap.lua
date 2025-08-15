@@ -58,7 +58,7 @@ vim.keymap.set('n', '<C-i>', '<C-a>', { noremap = true, silent = true, desc = 'I
 -- IQIM remaps Sino Steel P&ID
 vim.keymap.set('n', '<leader>irw', ':%s/ $//g<CR>', { noremap = true, silent = true, desc = '[r]emoves [w]hite spaces at the end of line' })
 vim.keymap.set('n', '<leader>icl', ':v/\\d\\+[- ].*\\|^$\\|^\\d\\{4\\}$\\|^\\w*$/d<CR>', { noremap = true, silent = true, desc = '[c]lean [l]ines' })
-vim.keymap.set('n', '<leader>imt', ':match search /^2\\d\\{3\\}-[^ \\t\\n\\ra-z]*$/<CR>', { noremap = true, silent = true, desc = '[m]ark [t]ag' })
+vim.keymap.set('n', '<leader>imt', ':match search /^2\\d\\{3\\}-[^ \\t\\n\\ra-z/]*$/<CR>', { noremap = true, silent = true, desc = '[m]ark [t]ag' })
 vim.keymap.set('v', '<leader>igt', ':g/./.,/^$/j | s/\\s\\+/-/g<CR>', { noremap = true, silent = true, desc = '[g]roup [t]ags' })
 vim.keymap.set('v', '<leader>ist', ':s/ /\\r/g<CR>', { noremap = true, silent = true, desc = '[s]plit [t]ags' })
 vim.keymap.set('n', '<leader>ifc', ':v/\\d\\{4\\}-.*$/d<CR>', { noremap = true, silent = true, desc = '[f]inal [c]leanup' })
