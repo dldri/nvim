@@ -90,3 +90,6 @@ vim.opt.colorcolumn = '80'
 vim.opt.expandtab = true -- Use spaces instead of tabs
 vim.opt.shiftwidth = 2 -- Indentation (e.g., >>) uses 4 spaces
 vim.opt.softtabstop = 2 -- Tab key in insert mode inserts 4 spaces
+
+-- Allow increments to recognise alphabets
+vim.opt.nrformats:append 'alpha'
