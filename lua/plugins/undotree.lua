@@ -1,9 +1,9 @@
 return {
   'mbbill/undotree',
   config = function()
-    local is_wsl = vim.fn.has 'wsl' == 1
+    local is_linux = vim.fn.has 'unix' == 1
 
-    if is_wsl then
+    if is_linux then
       vim.g.undotree_DiffCommand = 'diff'
     else
       vim.g.undotree_DiffCommand = 'FC'
