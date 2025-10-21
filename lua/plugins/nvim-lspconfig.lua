@@ -133,6 +133,7 @@ return {
       'ts_ls',
       'biome',
       'prettierd',
+      'tailwindcss',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
