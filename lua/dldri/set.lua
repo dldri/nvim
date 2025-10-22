@@ -30,7 +30,29 @@ vim.opt.showmode = false
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
+  -- Detects SSH session
+  local is_ssh = os.getenv 'SSH_TTY' or os.getenv 'SSH_CONNECTION' or os.getenv 'SSH_CLIENT'
+
+  if is_ssh then
+    local osc52 = require 'vim.ui.clipboard.osc52'
+    vim.g.clipboard = {
+      name = 'osc52-write',
+      copy = {
+        ['+'] = osc52.copy '+',
+        ['*'] = osc52.copy '*',
+      },
+      paste = {
+        ['+'] = function()
+          return { {}, 'v' }
+        end,
+        ['*'] = function()
+          return { {}, 'v' }
+        end,
+      },
+    }
+  else
+    vim.opt.clipboard = 'unnamedplus'
+  end
 end)
 
 -- Enable break indent
