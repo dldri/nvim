@@ -1,7 +1,11 @@
 return { -- Highlight, edit, and navigate code
   'nvim-treesitter/nvim-treesitter',
+  lazy = false,
+  branch = 'main',
   build = ':TSUpdate',
-  main = 'nvim-treesitter.configs',
+  config = function(_, opts)
+    require("nvim-treesitter").setup(opts)
+  end,
   opts = {
     ensure_installed = {
       'bash',
